@@ -1,4 +1,6 @@
-# FloatCalc
+![FloatCalc](https://raw.githubusercontent.com/Ciciboy1/FloatCalc/master/rsc/textures/fc_logo.png "FloatCalc")
+
+# Float Calculator
 
 A Utility for calculating Float Values in CS:GO
 
