@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FloatCalc:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FloatCalc_jar</output-path>
+    <root id="archive" name="FloatCalc.jar">
+      <element id="module-output" name="FloatCalc" />
+    </root>
+  </artifact>
+</component>
