@@ -9,7 +9,6 @@ import com.ciciboy.modules.FutureFloat.FutureFloat;
 import com.ciciboy.modules.WelcomeScrn.WelcomeScreen;
 
 import javax.swing.*;
-
 import java.awt.image.BufferedImage;
 import java.io.File;
 
@@ -29,7 +28,7 @@ public class Main extends JFrame {
     BugReport buggy = new BugReport();
     Options opts = new Options();
 
-    public static BufferedImage logo, gear20, gear128, empty_img, cons_icon, home_icon, help_icon, bug_icon;
+    public static BufferedImage logo, gear20, gear128, empty_img, cons_icon, home_icon, help_icon, bug_icon, donate_icon;
 
     private Main(){
         super("Float Calculator");
@@ -51,7 +50,7 @@ public class Main extends JFrame {
         about.setToolTipText("Öffnet eine externe Webseite: steamcommunity.com");
         help_menu.add(about);
         help_menu.addSeparator();
-        help_menu.add(new Module(don, "Spenden", this));
+        help_menu.add(new Module(don, "Spenden", this, donate_icon));
         help_menu.addSeparator();
         help_menu.add(new Module(buggy, "Bug melden", this, bug_icon));
         help_menu.addSeparator();
@@ -78,6 +77,7 @@ public class Main extends JFrame {
         home_icon = loadImg("./rsc/textures/home_icon_20.png");
         help_icon = loadImg("./rsc/textures/help_icon_20.png");
         bug_icon = loadImg("./rsc/textures/bug_icon_20.png");
+        donate_icon = loadImg("./rsc/textures/donate_icon_20.png");
         propManager = new PropertyManager(new File("./rsc/config.properties"));
         String design = propManager.readProperty("Design");
         try {
