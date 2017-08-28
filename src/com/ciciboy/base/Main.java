@@ -9,6 +9,7 @@ import com.ciciboy.modules.FutureFloat.FutureFloat;
 import com.ciciboy.modules.WelcomeScrn.WelcomeScreen;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
@@ -19,6 +20,7 @@ public class Main extends JFrame {
 
     public static Console console;
     public static PropertyManager propManager;
+    public static Dimension screenSize;
     AvgFloat avgFloat = new AvgFloat();
     WelcomeScreen welScrn = new WelcomeScreen();
     AvgTuFloat avgTuFloat = new AvgTuFloat();
@@ -32,6 +34,7 @@ public class Main extends JFrame {
 
     private Main(){
         super("Float Calculator");
+        screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         console.log("Float Calculator gestartet");
         setIconImage(logo);
         JMenuBar menuBar = new JMenuBar();
@@ -65,6 +68,7 @@ public class Main extends JFrame {
         menuBar.add(ext);
         Util.show(welScrn.getSelf(), this);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setLocation((screenSize.width-getSize().width)/2, (screenSize.height-getSize().height)/2);
         setVisible(true);
     }
 

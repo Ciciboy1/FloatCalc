@@ -2,8 +2,6 @@ package com.ciciboy.base;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-
-
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
@@ -48,6 +46,7 @@ public class Options extends JFrame{
     }
 
     public void open(){
+        setLocation((screenSize.width-getSize().width)/2, (screenSize.height-getSize().height)/2);
         setVisible(true);
         setDefaultDesign();
     }
